@@ -5,7 +5,7 @@ export interface _Profile {
   displayName?: string
   displayEmail?: string
   phone?: string
-  address?: _Address
+  address: _Address
   createdAt?: Date
   updatedAt?: Date
 }
@@ -13,7 +13,7 @@ export interface _Profile {
 export interface _User {
   id: number
   email: string
-  password: string
+  password?: string
   name: string
   profile?: _Profile
   createdAt: Date
