@@ -1,3 +1,5 @@
+import { _Tax } from './Tax'
+
 export interface _Invoice {
   id: number
   userId: number
@@ -8,9 +10,7 @@ export interface _Invoice {
   dueDate: Date
   notes: string
   lineItems: _LineItem[]
-  subtotal?: number
-  tax?: number
-  total?: number
+  total: number
 }
 
 export enum _InvoiceStatus {
