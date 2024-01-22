@@ -14,11 +14,11 @@ export interface _Invoice {
 }
 
 export enum _InvoiceStatus {
-  DRAFT = 'draft',
-  SENT = 'sent',
-  PARTIAL = 'partial',
-  PAID = 'paid',
-  VOID = 'void'
+  DRAFT = 'Draft',
+  SENT = 'Sent',
+  PARTIAL = 'Partial',
+  PAID = 'Paid',
+  VOID = 'Void'
 }
 
 export interface _LineItem {
