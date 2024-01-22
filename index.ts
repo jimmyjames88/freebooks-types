@@ -1,5 +1,6 @@
 export * from './Address'
 export * from './Client'
 export * from './Invoice'
+export * from './Payment'
 export * from './Tax'
 export * from './User'

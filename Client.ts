@@ -1,7 +1,7 @@
 import { _Address } from './Address'
 
 export interface _Client {
-  id: number
+  id?: number
   name: string
   email: string
   phone: string
