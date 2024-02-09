@@ -4,12 +4,12 @@ import { _Tax } from './Tax'
 export interface _Expense {
   id: number
   UserId: number
-  invoiceId?: number
+  InvoiceId?: number
   paymentTypeId?: number
   date: Date
   description: string
   subtotal: number
-  taxes?: _Tax[]
+  Taxes?: _Tax[]
   createdAt?: Date
   updatedAt?: Date
 }

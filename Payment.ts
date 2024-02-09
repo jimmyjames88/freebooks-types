@@ -7,12 +7,13 @@ export interface _PaymentType {
 export interface _Payment {
   id?: number
   date?: Date
-  clientId?: number
-  invoiceId?: number
-  userId?: number
+  ClientId?: number
+  InvoiceId?: number
+  UserId?: number
   description?: string
   amount: number
-  type: _PaymentType
+  PaymentType?: _PaymentType
+  paymentTypeId?: number
   createdAt?: Date
   updatedAt?: Date
 }

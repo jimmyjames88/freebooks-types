@@ -1,7 +1,7 @@
 import { _Address } from './Address'
 
 export interface _Profile {
-  userId?: number
+  UserId?: number
   displayName?: string
   displayEmail?: string
   phone?: string
@@ -15,7 +15,7 @@ export interface _User {
   email: string
   password?: string
   name: string
-  profile?: _Profile
+  Profile?: _Profile
   createdAt: Date
   updatedAt: Date
 }
