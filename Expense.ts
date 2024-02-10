@@ -2,7 +2,7 @@ import { _PaymentType } from './Payment'
 import { _Tax } from './Tax'
 
 export interface _Expense {
-  id: number
+  id?: number
   UserId: number
   InvoiceId?: number
   paymentTypeId?: number
