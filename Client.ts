@@ -10,5 +10,5 @@ export interface _Client {
   website?: string
   address: _Address
   User: _User
-  Invoices?: _Invoice[]
+  Invoices: _Invoice[]
 }
