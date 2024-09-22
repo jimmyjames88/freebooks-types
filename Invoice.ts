@@ -7,20 +7,20 @@ import { _User } from './User'
 
 export interface _Invoice {
   id: number
-  UserId?: number
-  User?: _User
-  ClientId?: number
-  Client?: _Client
+  UserId: number
+  User: _User
+  ClientId: number
+  Client: _Client
   refNo: string
   status: _InvoiceStatus
-  issueDate?: Date
-  dueDate?: Date
+  issueDate: Date
+  dueDate: Date
   notes: string
-  lineItems: _LineItem[]
-  Expenses?: _Expense[],
-  Payments?: _Payment[],
-  Taxes?: _Tax[]
-  total?: number
+  LineItems: _LineItem[]
+  Expenses: _Expense[],
+  Payments: _Payment[],
+  Taxes: _Tax[]
+  total: number
 }
 
 export enum _InvoiceStatus {

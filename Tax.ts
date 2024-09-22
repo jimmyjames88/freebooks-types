@@ -5,7 +5,7 @@ export enum _TaxType {
 
 export interface _Tax {
   id: number
-  UserId?: number
+  UserId: number
   name: string
   rate: number
   type: _TaxType

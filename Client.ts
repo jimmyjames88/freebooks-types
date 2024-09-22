@@ -6,8 +6,8 @@ export interface _Client {
   id: number
   name: string
   email: string
-  phone?: string
-  website?: string
+  phone: string
+  website: string
   address: _Address
   User: _User
   Invoices: _Invoice[]

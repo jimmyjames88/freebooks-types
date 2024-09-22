@@ -1,15 +1,16 @@
-import { _PaymentType } from './Payment'
+import { _PaymentType } from './PaymentType'
 import { _Tax } from './Tax'
 
 export interface _Expense {
-  id?: number
+  id: number
   UserId: number
-  InvoiceId?: number
-  paymentTypeId?: number
+  InvoiceId: number | null
+  PaymentType: _PaymentType
+  paymentTypeId: number
   date: Date
   description: string
   subtotal: number
-  Taxes?: _Tax[]
-  createdAt?: Date
-  updatedAt?: Date
+  Taxes: _Tax[]
+  createdAt: Date
+  updatedAt: Date
 }

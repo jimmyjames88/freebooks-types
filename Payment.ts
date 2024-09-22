@@ -1,19 +1,19 @@
-export interface _PaymentType {
-  id: number
-  name: string
-  icon: string
-}
+import { _PaymentType, Optional } from "./"
+
 
 export interface _Payment {
-  id?: number
-  date?: Date
-  ClientId?: number
-  InvoiceId?: number
-  UserId?: number
-  description?: string
+  id: number
+  ClientId: number
+  InvoiceId: number
+  UserId: number
+  date: Date
+  description: string
   amount: number
-  PaymentType?: _PaymentType
-  paymentTypeId?: number
-  createdAt?: Date
-  updatedAt?: Date
+  PaymentType: _PaymentType
+  paymentTypeId: number
+  createdAt: Date
+  updatedAt: Date
 }
+
+export interface _PaymentInputCreate extends Optional<_Payment, 'id' | 'createdAt' | 'updatedAt' > {}
+export interface _PaymentInputUpdate extends Optional<_Payment, 'id' | 'createdAt' | 'updatedAt' > {}
