@@ -6,3 +6,6 @@ export interface _Address {
   postal: string
   country: string
 }
+
+export interface _AddressInputCreate extends _Address {}
+export interface _AddressInputUpdate extends _Address {}

@@ -1,10 +1,15 @@
-import { _Client } from './Client'
-import { _DataTableFilters } from './DataTable'
-import { _Expense } from './Expense'
-import { _Payment } from './Payment'
-import { _Tax } from './Tax'
-import { _User } from './User'
+import {
+  _Client, _DataTableFilters, _Expense, _Payment, _Tax, _User, _LineItem, Optional
+} from './'
 
+
+export enum _InvoiceStatus {
+  DRAFT = 'Draft',
+  SENT = 'Sent',
+  PARTIAL = 'Partial',
+  PAID = 'Paid',
+  VOID = 'Void'
+}
 export interface _Invoice {
   id: number
   UserId: number
@@ -21,18 +26,41 @@ export interface _Invoice {
   Payments: _Payment[],
   Taxes: _Tax[]
   total: number
+  createdAt: Date
+  updatedAt: Date
 }
 
-export enum _InvoiceStatus {
-  DRAFT = 'Draft',
-  SENT = 'Sent',
-  PARTIAL = 'Partial',
-  PAID = 'Paid',
-  VOID = 'Void'
-}
+export interface _InvoiceInputCreate extends Optional<
+  _Invoice,
+  | 'id'
+  | 'User'
+  | 'Client'
+  | 'status'
+  | 'issueDate'
+  | 'dueDate'
+  | 'notes'
+  | 'LineItems'
+  | 'Expenses'
+  | 'Payments'
+  | 'Taxes'
+  | 'total'
+  | 'createdAt'
+  | 'updatedAt'
+> {}
 
-export interface _LineItem {
-  description: string
-  quantity?: number
-  rate?: number
-}
+export interface _InvoiceInputUpdate extends Optional<
+  _Invoice,
+  | 'User'
+  | 'Client'
+  | 'status'
+  | 'issueDate'
+  | 'dueDate'
+  | 'notes'
+  | 'LineItems'
+  | 'Expenses'
+  | 'Payments'
+  | 'Taxes'
+  | 'total'
+  | 'createdAt'
+  | 'updatedAt'
+> {}

@@ -15,5 +15,5 @@ export interface _Payment {
   updatedAt: Date
 }
 
-export interface _PaymentInputCreate extends Optional<_Payment, 'id' | 'createdAt' | 'updatedAt' > {}
-export interface _PaymentInputUpdate extends Optional<_Payment, 'id' | 'createdAt' | 'updatedAt' > {}
+export interface _PaymentInputCreate extends Optional<_Payment, 'id' | 'createdAt' | 'updatedAt' | 'PaymentType'> {}
+export interface _PaymentInputUpdate extends Optional<_Payment, 'id' | 'createdAt' | 'updatedAt' | 'PaymentType'> {}

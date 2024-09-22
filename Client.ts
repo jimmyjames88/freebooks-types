@@ -1,6 +1,4 @@
-import { _Address } from './Address'
-import { _Invoice } from './Invoice'
-import { _User } from './User'
+import { _Address, _Invoice, _User, Optional } from './'
 
 export interface _Client {
   id: number
@@ -9,6 +7,10 @@ export interface _Client {
   phone: string
   website: string
   address: _Address
+  UserId: number
   User: _User
   Invoices: _Invoice[]
 }
+
+export interface _ClientInputCreate extends Optional<_Client, 'id' | 'User' | 'UserId' | 'Invoices' | 'address' | 'website' | 'phone'> {}
+export interface _ClientInputUpdate extends Optional<_Client, 'User' | 'UserId' | 'Invoices' | 'address' | 'website' | 'phone'> {}

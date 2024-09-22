@@ -1,5 +1,4 @@
-import { _PaymentType } from './PaymentType'
-import { _Tax } from './Tax'
+import { _PaymentType, _Tax, Optional } from './'
 
 export interface _Expense {
   id: number
@@ -14,3 +13,6 @@ export interface _Expense {
   createdAt: Date
   updatedAt: Date
 }
+
+export interface _ExpenseInputCreate extends Optional<_Expense, 'id' | 'InvoiceId' | 'Taxes' | 'PaymentType' | 'createdAt' | 'updatedAt'> {}
+export interface _ExpenseInputUpdate extends Optional<_Expense, 'InvoiceId' | 'createdAt' | 'updatedAt'> {}
