@@ -5,7 +5,7 @@ export interface _Expense {
   UserId: number
   InvoiceId: number | null
   PaymentType: _PaymentType
-  paymentTypeId: number
+  PaymentTypeId: number
   date: Date
   description: string
   subtotal: number

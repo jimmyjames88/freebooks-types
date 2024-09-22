@@ -10,7 +10,7 @@ export interface _Payment {
   description: string
   amount: number
   PaymentType: _PaymentType
-  paymentTypeId: number
+  PaymentTypeId: number
   createdAt: Date
   updatedAt: Date
 }
